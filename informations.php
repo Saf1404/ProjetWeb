@@ -8,50 +8,6 @@ session_start();
     <meta charset="UTF-8">
     <title>NiceEvents - Informations</title>
     <link rel="stylesheet" href="style.css">
-    <style> 
-           .bande {
-            background-color: rgba(255, 255, 255, 0.5); 
-            padding: 5px 10px; 
-            border-radius: 5px;
-            font-size: 1.2em; 
-        }
-
-        .image-container {
-            display: flex; 
-            align-items: center;
-            justify-content: space-around; 
-        }
-
-        .image-container img {
-            width: 45%; 
-            height: auto; 
-            border: 3px solid black;
-            border-radius: 5px;
-        }
-
-        .image-container .taille {
-            width: 60%; 
-        }
-
-        .image-container .deplacement {
-            margin-left: 100px;
-        }
-
-        .image-container .dplc {
-            margin-right: 80px;
-        }
-
-        .image-caption {
-            position: relative;
-            text-align: center; 
-            font-size: 14px; 
-            margin-top: 10px;    
-        }
-
-        .image-with-caption {
-            text-align: center;
-        }
-    </style>
 </head>
 <body>
     <?php include 'header.php'; ?>
@@ -99,7 +55,7 @@ session_start();
     <br>
     <br>
     <form action="informations2.php" method="post" style="text-align: center;">
-        <button type="submit" class="subscribe-btn">Plus d'informations</button>
+        <button type="submit" class="signup-btn">Plus d'informations</button>
     </form>                        
     </main>
 </body>

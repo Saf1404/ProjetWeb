@@ -34,7 +34,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         "description" => $description,
         "lieu" => $lieu,
         "date" => $date,
-        "createur" => $createur
+        "createur" => $createur,
+        "participants" => [],
+        "interesses" => []
     ];
 
     file_put_contents('evenements.json', json_encode($evenements));
@@ -55,20 +57,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <?php include 'header.php'; ?>
 
     <main>
-        <h1>Publier un événement</h1>
 
         <form action="publier_evenement.php" method="post">
+            <h1>Publier un événement</h1>
             <label for="titre">Titre :</label>
-            <input type="text" id="titre" name="titre" required>
+            <input type="text" id="titre" name="titre" class="event-input" required>
 
             <label for="description">Description :</label>
-            <textarea id="description" name="description" required></textarea>
+            <textarea id="description" name="description" class="event-textarea" required></textarea>
 
             <label for="lieu">Lieu :</label>
-            <input type="text" id="lieu" name="lieu" required>
+            <input type="text" id="lieu" name="lieu" class="event-input" required>
 
             <label for="date">Date et heure :</label>
-            <input type="datetime-local" id="date" name="date" required>
+            <input type="datetime-local" id="date" name="date" class="event-input" required>
 
             <button type="submit">Publier</button>
         </form>

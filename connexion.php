@@ -19,7 +19,7 @@
     <main>
         <h1><span class="bande">Connexion</span></h1>
 
-        <form action="traitement_connexion.php" method="post">
+        <form action="traitement_connexion.php" method="post" id="form_connexion">
             <label for="pseudo"><span class="bande">Pseudo :</span></label>
             <input type="text" id="pseudo" name="pseudo" required>
 
@@ -31,7 +31,7 @@
 
         <p style="text-align: center;"><span class="bande">Pas encore inscrit ?</span></p>
         <form action="inscription.php" method="post" style="text-align: center;">
-        <button type="submit" class="subscribe-btn">créer un compte</button>
+        <button type="submit" class="signup-btn">créer un compte</button>
     </form>
     </main>
 
