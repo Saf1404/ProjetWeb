@@ -47,7 +47,8 @@ if (!function_exists('getRelativeDate')) {
                         🩶 S'intéresser
                     <?php endif; ?>
                 </button>
-                <button class="share-btn">↪️ Partager</button>
+                <button class="share-btn" data-link="<?php echo 'http://' . $_SERVER['HTTP_HOST'] . '/evenement.php?id=' . $evenement['id']; ?>">↪️ Partager</button>
+                <a href="evenement.php?id=<?php echo $evenement['id']; ?>" class="details-btn">Détails</a>
             <?php else: ?>
                 <a href="connexion.php" class="login-btn">Se connecter</a>
             <?php endif; ?>
@@ -58,3 +59,4 @@ if (!function_exists('getRelativeDate')) {
         </div>
     </div>
 </div>
+<script src="chat.js"></script>

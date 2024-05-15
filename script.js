@@ -4,7 +4,6 @@ document.querySelectorAll('.signup-btn').forEach(function(button) {
         var pseudo = this.getAttribute('data-pseudo');
 
 
-        // requête AJAX au serv pour inscrire/désinscrire
         var xhr = new XMLHttpRequest();
         xhr.open('POST', 'inscrire_evenement.php', true);
         xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');

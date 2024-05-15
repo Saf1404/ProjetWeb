@@ -1,7 +1,6 @@
 <?php
 session_start();
 
-// Vérifier si l'utilisateur est connecté
 if (!isset($_SESSION["pseudo"])) {
     header("Location: connexion.php");
     exit();

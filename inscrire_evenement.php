@@ -14,13 +14,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     if (in_array($pseudo, $evenements[$index]["participants"])) {
-        // Désinscription
         $evenements[$index]["participants"] = array_diff($evenements[$index]["participants"], [$pseudo]);
     } else {
-        // Inscription
         $evenements[$index]["participants"][] = $pseudo;
 
-        // Désintéresser utilisateur si intéressé
         if (isset($evenements[$index]["interesses"]) && in_array($pseudo, $evenements[$index]["interesses"])) {
             $evenements[$index]["interesses"] = array_diff($evenements[$index]["interesses"], [$pseudo]);
         }

@@ -5,13 +5,11 @@ error_reporting(E_ALL);
 
 session_start();
 
-// Vérifier si l'utilisateur est connecté
 if (!isset($_SESSION["pseudo"])) {
     header("Location: connexion.php");
     exit();
 }
 
-// Traitement de l'ajout d'un événement
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $titre = $_POST["titre"];
     $description = $_POST["description"];
@@ -28,8 +26,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 
-    // publier le nouvel événement au tableau des événements
+    $id = uniqid('event_', true);
     $evenements[] = [
+        "id" => $id,
         "titre" => $titre,
         "description" => $description,
         "lieu" => $lieu,

@@ -43,11 +43,15 @@ main {
     padding: 30px;
     background-color:rgba(224, 231, 241, 0.874) ;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: width 0.3s ease;
-    width: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: scale 0.3s ease;
+    width: 60%;
     margin-left: auto;
     margin-right: auto;
+}
+
+.event:hover {
+    scale: 105%;
 }
 
 .event-body {
@@ -67,7 +71,21 @@ main {
     gap: 10px;
 }
 
-.login-btn {
+.event-details {
+    margin-bottom: 30px;
+    padding: 30px;
+    background-color:rgba(224, 231, 241, 0.874) ;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: scale 0.3s ease;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.login-btn,
+.details-btn {
     color: #4f2d06;;
     text-decoration: none;
     padding: 10px 15px;
@@ -80,7 +98,8 @@ main {
     font-weight: 600;
 }
 
-.login-btn:hover {
+.login-btn:hover,
+.details-btn:hover {
     background-color: #B45F04;
 }
 
@@ -96,6 +115,7 @@ main {
     font-size: 16px;
     font-weight: 600;
     transition: background-color 0.3s ease;
+    margin-right: 5px;
 }
 
 .signup-btn:hover,
@@ -112,11 +132,6 @@ main {
 .event-stats {
     display: flex;
     gap: 10px;
-}
-
-
-.event:hover {
-    width: 55%;
 }
 
 .event h2 {
@@ -265,4 +280,42 @@ input[type="datetime-local"] {
 
 .image-with-caption {
     text-align: center;
+}
+
+#chat-container {
+    padding: 10px;
+    background-color: rgba(224, 231, 241, 0.874);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    display: none;
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#chat-messages {
+    height: 200px;
+    overflow-y: scroll;
+    border: 2px solid #47484a;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.message {
+    margin-bottom: 10px;
+}
+
+.message strong {
+    font-weight: bold;
+}
+
+.message small {
+    color: #888;
+    font-size: 12px;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
 }
