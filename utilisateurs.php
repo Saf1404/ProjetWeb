@@ -6,7 +6,7 @@
   ),
   1 => 
   array (
-    'pseudo' => 'Kurama',
-    'motdepasse' => '$2y$10$TGHBhQl1nUrE7wVD69dJ7u636eSVs6AfhDAj6FuaRLuIPe1YEYPb.',
+    'pseudo' => 'Saf2',
+    'motdepasse' => '$2y$10$LDsvkya1SwM8EYjos6ZeRe2FFBmsounmW4bPXQHYjkf5FNnwg8qHC',
   ),
 ); ?>
